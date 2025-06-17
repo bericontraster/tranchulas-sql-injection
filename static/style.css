@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+form {
+    margin: 20px 0;
+}
+input[type="text"], input[type="password"] {
+    padding: 5px;
+    width: 200px;
+}
+input[type="submit"] {
+    padding: 5px 10px;
+}
