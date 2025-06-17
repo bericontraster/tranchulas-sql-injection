@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Injection Lab</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>Employee Lookup</h1>
+    <p>Search employee records by ID.</p>
+</header>
+<main>
+    <form method="get" action="/sql-lab">
+        <input type="text" name="id" placeholder="Employee ID" value="{id}">
+        <input type="submit" value="Search">
+    </form>
+    {result}
+    <p><a href="/">Back to Home</a></p>
+</main>
+</body>
+</html>
