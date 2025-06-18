@@ -11,7 +11,13 @@ EMPLOYEES = [
     (1, 'Alice Johnson', 'CEO', 'Management'),
     (2, 'Bob Smith', 'CTO', 'Technology'),
     (3, 'Carol White', 'CFO', 'Finance'),
+<<<<<<< xgls4j-codex/create-time-based-sqli-and-no-sqli-labs
+    (4, 'Dave Brown', 'HR Manager', 'Human Resources'),
+    (5, 'Eve Davis', 'Sales Manager', 'Sales'),
+    (6, 'Frank Moore', 'Engineer', 'Technology')
+=======
     (4, 'Dave Brown', 'HR Manager', 'Human Resources')
+>>>>>>> main
 ]
 
 USERS = [
@@ -70,11 +76,19 @@ def sql_lab(environ, start_response):
             return 0
         conn.create_function('sleep', 1, sleep)
         c = conn.cursor()
+<<<<<<< xgls4j-codex/create-time-based-sqli-and-no-sqli-labs
+        query = f"SELECT name FROM employees WHERE id = {id_value}"
+        try:
+            rows = c.execute(query).fetchall()
+            if rows:
+                result_html = '<p>Employee record exists.</p>'
+=======
         query = f"SELECT id, name, role, department FROM employees WHERE id = {id_value}"
         try:
             rows = c.execute(query).fetchall()
             if rows:
                 result_html = '<ul>' + ''.join(f'<li>{row[1]} - {row[2]} ({row[3]})</li>' for row in rows) + '</ul>'
+>>>>>>> main
             else:
                 result_html = '<p>No employee found.</p>'
         except sqlite3.Error as e:
